@@ -1,0 +1,37 @@
+<html>
+<body>
+<h2>College Result Portal</h2>
+<input type="text" id="no" placeholder="enter regno"></br></br>
+<button type="button" onclick="showresult()">Get Result</button></br>
+<p id="result"></p>
+<script>
+function showresult(){	
+const student=
+[{"regno":101,"Name":"Arun","Marks":78,"Result":"Pass"},
+{"regno":102,"Name":"Varun","Marks":58,"Result":"Pass"},
+{"regno":103,"Name":"Tharun","Marks":82,"Result":"Pass"},
+{"regno":104,"Name":"Leela","Marks":34,"Result":"Fail"},
+{"regno":105,"Name":"Seetha","Marks":61,"Result":"Pass"}];
+
+var input=document.getElementById("no").value;
+var found=false;
+
+for(let i=0;i<=student.length;i++){
+if(input==student[i].regno){
+document.getElementById("result").innerHTML=
+"Regno :"+student[i].regno+"<br>"+
+"Name :"+student[i].Name+"<br>"+
+"Marks :"+student[i].Marks+"<br>"+
+"Result :"+student[i].Result;
+found=true;
+break;
+}
+}
+
+if(!found){
+document.getElementById("result").innerHTML="Invalid Register Number";
+}
+}
+</script>
+</body>
+</html>

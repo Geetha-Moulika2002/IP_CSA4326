@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function show() {
+var n = document.getElementById("name").value;
+document.getElementById("out").innerHTML = "<h1>" + n + "</h1>" +"<h2>" + n + "</h2>" +"<h3>" + n + "</h3>" +"<h4>" + n + "</h4>" +"<h5>" + n + "</h5>" +
+"<h6>" + n + "</h6>";
+}
+</script>
+</head>
+<body>Name<input type="text" id="name">
+<button onclick="show()">ok</button>
+<div id="out"></div>
+</body>
+</html>
